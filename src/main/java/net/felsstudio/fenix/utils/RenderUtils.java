@@ -44,6 +44,30 @@ public class RenderUtils {
         drawOutlinedBox(DEFAULT_AABB);
     }
 
+    public static void drawRect(int x, int y, int width, int height, int color) {
+        float alpha = (color >> 24 & 255) / 255.0F;
+        float red = (color >> 16 & 255) / 255.0F;
+        float green = (color >> 8 & 255) / 255.0F;
+        float blue = (color & 255) / 255.0F;
+
+        GlStateManager.pushMatrix();
+        GlStateManager.enableBlend();
+        GlStateManager.disableTexture2D();
+        GlStateManager.color(red, green, blue, alpha);
+        GL11.glBegin(GL11.GL_QUADS);
+
+        // Draw the rectangle
+        GL11.glVertex2i(x, y + height);
+        GL11.glVertex2i(x + width, y + height);
+        GL11.glVertex2i(x + width, y);
+        GL11.glVertex2i(x, y);
+
+        GL11.glEnd();
+        GlStateManager.enableTexture2D();
+        GlStateManager.disableBlend();
+        GlStateManager.popMatrix();
+    }
+
     public static void drawOutlinedBox(AxisAlignedBB bb)
     {
         glBegin(GL_LINES);
