@@ -1,0 +1,16 @@
+[
+{
+  "modid": "fenixclient",
+  "name": "FenixClient",
+  "description": "My client for you",
+  "version": "0.1.0",
+  "mcversion": "1.12.2",
+  "url": "https://www.youtube.com/@FelsStudio_official",
+  "updateUrl": "",
+  "authorList": ["FelekDevYT"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
