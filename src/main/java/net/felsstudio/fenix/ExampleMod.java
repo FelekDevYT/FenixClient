@@ -3,6 +3,7 @@ package net.felsstudio.fenix;
 import net.felsstudio.fenix.Menu.onGuiOpenEvent;
 import net.felsstudio.fenix.chat.BlockESPCommand;
 import net.felsstudio.fenix.chat.CommandManager;
+import net.felsstudio.fenix.chat.GotoCommand;
 import net.felsstudio.fenix.key.Key;
 import net.felsstudio.fenix.ui.ui;
 import net.minecraft.client.Minecraft;
@@ -50,6 +51,7 @@ public class ExampleMod
         settingsManager = new SettingsManager();
         clickGuiManager = new ClickGuiManager();
         commandManager.registerCommand(new BlockESPCommand());
+        commandManager.registerCommand(new GotoCommand());
 
         Client.startup();
         MinecraftForge.EVENT_BUS.register(new Key());

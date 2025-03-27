@@ -17,7 +17,6 @@ public class CommandManager {
     private static final Map<String, CommandBase> commands = new HashMap<>();
 
     public CommandManager() {
-        // Регистрируем этот класс как обработчик событий
         MinecraftForge.EVENT_BUS.register(this);
     }
 
